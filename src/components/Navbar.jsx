@@ -11,17 +11,18 @@ function Navbar() {
     return (
         <>
             <Router>
-                    <div className="container">
-                        <button
-                            className="btn"
-                            onClick={() => {
-                                setNavOpening(!isNavOpen);
-                            }}
-                        >
-                            <FontAwesomeIcon icon={faBars} />
-                        </button>
-                    </div>
-                    <div className={isNavOpen ? "open" : "closed"}>
+                <div className="container">
+                    <button
+                        className="btn"
+                        onClick={() => {
+                            setNavOpening(!isNavOpen);
+                        }}
+                    >
+                        <FontAwesomeIcon icon={faBars} />
+                    </button>
+                </div>
+                <div className={isNavOpen ? "open" : "closed"}>
+                    <div className="navbar">
                         <Link to="/" className="link">
                             Home
                         </Link>
@@ -32,6 +33,7 @@ function Navbar() {
                             About
                         </Link>
                     </div>
+                </div>
             </Router>
         </>
     );
